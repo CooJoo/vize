@@ -56,6 +56,7 @@ namespace vize
                     text_saflık.Text = saf;
                     text_alis.Text = alis.ToString();
                     text_satis.Text = satis.ToString();
+                    Tarih.Text = DateTime.Now.ToLongDateString();
                 }
             }
         }
