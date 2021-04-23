@@ -43,6 +43,21 @@ namespace vize
                 }
             }
             comboBox1.Sorted = true;
+            foreach (XmlNode item in tür)
+            {
+                string saflik = item.SelectSingleNode("adi").InnerText;
+                if (saflik==comboBox1.Text)
+                {
+                    string altin_adi = item.SelectSingleNode("adi").InnerText;
+                    string saf = item.SelectSingleNode("field").InnerText;
+                    string alis = (item.SelectSingleNode("al").InnerText);
+                    string satis = (item.SelectSingleNode("sat").InnerText);
+                    text_adi.Text = altin_adi;
+                    text_saflık.Text = saf;
+                    text_alis.Text = alis.ToString();
+                    text_satis.Text = satis.ToString();
+                }
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
